@@ -2,7 +2,10 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const app = express()
 const posts = require("./model/posts")
+const path = require("path")
 const PORT = 3000
+
+app.use(express.static(path.join(__dirname,'public')))
 
 app.listen(PORT, () => {
     console.log(`Servidor criado na porta: ${PORT}`)
