@@ -19,6 +19,10 @@ app.get("/",(req,res)=>{
     res.render("home")
 })
 
+app.get("/avisos",(req,res)=>{
+    res.render("avisos")
+})
+
 app.listen(PORTA,()=>{
     console.log(`O servidor está rodando na porta: ${PORTA}`)
 })
