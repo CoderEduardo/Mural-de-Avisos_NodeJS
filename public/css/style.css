@@ -59,6 +59,7 @@ a:hover{
     height: 250px;
     padding: 25px;
     margin: auto;
+    margin-bottom: 25px;
     word-wrap: break-word;
     overflow-y:auto;
 }
@@ -66,3 +67,4 @@ a:hover{
 .avisos h2{
     text-align: center;
 }
+
