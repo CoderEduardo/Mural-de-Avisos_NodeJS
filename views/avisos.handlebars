@@ -1,10 +1,12 @@
 <div class="container">
-    <h1>Avisos</h1>
-   
-   <section class="avisos">
-        <h2>Titulo</h2>
-        <p>Data</p>
-        <p>ConteudodoConteudoCteudoConteudoConteudoConteudoConteuConteudodoConteudoCteudoConteudoConteudoConteudoConteudoConteudodoConteudoCteudoConteudoConteudoConteudoConteudoConteudodoConteudoCteudoConteudoConteudoConteudoConteudoConteudodoConteudoCteudoConteudoConteudoConteudoConteudoConteudodoConteudoCteudoConteudoConteudoConteudoConteudoConteudodoConteudoCteudoConteudoConteudoConteudoConteudodo</p>
-   </section>
-     
+     <h1>Avisos</h1>
+
+     {{#each aviso}}
+     <section class="avisos">
+          <h2>{{titulo}}</h2>
+          <p>{{createdAt}}</p>
+          <p>{{conteudo}}</p>
+     </section>
+     {{/each}}
+
 </div>
