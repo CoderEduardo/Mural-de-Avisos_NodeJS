@@ -10,4 +10,8 @@ const Avisos = bd.sequelize.define('avisos', {
 
 })
 
+/* Códgio usado apenas para criar a tabela, depois de criado uma vez, você pode apagar ele
+Avisos.sync({force:true}) 
+*/
+
 module.exports = Avisos
