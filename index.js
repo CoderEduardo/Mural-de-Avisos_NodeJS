@@ -29,20 +29,29 @@ app.get("/", (req, res) => {
 
 //Criando a renderização da rota avisos mostrando dados do banco
 app.get("/avisos", (req, res) => {
-    Aviso.findAll({order:[["id","DESC"]]}).then((aviso) => {
-        res.render("avisos",{aviso:aviso})
+    Aviso.findAll({ order: [["id", "DESC"]] }).then((aviso) => {
+        res.render("avisos", { aviso: aviso })
     })
 })
 
 //Criando itens no banco com o method post
 app.post("/add", (req, res) => {
     Aviso.create({
-        titulo:req.body.titulo,
-        conteudo:req.body.conteudo
-    }).then(()=>{
+        titulo: req.body.titulo,
+        conteudo: req.body.conteudo
+    }).then(() => {
         res.redirect("/")
-    }).catch((erro)=>{
+    }).catch((erro) => {
         res.send("Algo deu errado" + erro)
+    })
+})
+
+//Deletando dados
+app.get("/deletar/:id", (req, res) => {
+    Aviso.destroy({ where: { "id": req.params.id } }).then(()=>{
+        res.redirect("/avisos")
+    }).catch((erro)=>{
+        res.send("Alguma coisa deu errado " + erro)
     })
 })
 

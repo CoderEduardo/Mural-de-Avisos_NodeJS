@@ -73,3 +73,14 @@ a:hover{
         width: 80%;
     }
 }
+
+.botao{
+    display: flex;
+    align-items: end;
+    width: 200px;
+    height: 70px;
+}
+
+.botao:hover{
+   background-color: rgb(189, 189, 189);;
+}
